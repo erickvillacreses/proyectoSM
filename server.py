@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Servidor Multimedia funcionando. Rutas: /video, /video_chunk, /survey, /metrics'
+    return render_template('index.html')
+
 
 
 
