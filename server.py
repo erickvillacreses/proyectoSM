@@ -8,9 +8,12 @@ app = Flask(__name__)
 def index():
     return 'Servidor Multimedia funcionando. Rutas: /video, /video_chunk, /survey, /metrics'
 
+
+
 @app.route('/video')
 def video():
-    return send_file('video.mp4', mimetype='video/mp4')
+    return render_template('video.html')
+
 
 @app.route('/video_chunk')
 def video_chunk():
